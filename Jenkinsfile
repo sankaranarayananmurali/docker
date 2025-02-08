@@ -11,10 +11,12 @@ pipeline {
             }
         }
         stage('Docker Login') {
-            steps {
-                bat '''echo "%DOCKER_PASSWORD%" | docker login -u "%DOCKER_USERNAME%" --password-stdin '''
-            }
+    steps {
+        script {
+            bat "echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin"
         }
+    }
+}
         
         stage('Build Docker Image') {
             steps {
