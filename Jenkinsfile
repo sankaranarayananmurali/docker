@@ -20,7 +20,7 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t %DOCKER_USERNAME%/my-app:latest .'
+                bat 'docker build -t latest .'
             }
         }
         stage('Push Docker Image') {
