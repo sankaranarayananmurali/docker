@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_USERNAME = credentials('sharathyp25')
+        DOCKER_USERNAME = credentials('sharathyp')
         DOCKER_PASSWORD = credentials('docker_new')
     }
     stages {
